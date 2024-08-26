@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+// My custom colors
+$gunmetal: #1c2e30ff;
+$midnight-green: #023a40ff;
+$rich-black: #061c1fff;
+$outer-space: #3f4445ff;
+$paynes-gray: #536b70ff;
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $rich-black !important;
+}
+
+/* Container Styling */
+.container {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  padding: 20px;
+  background-color: $outer-space;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-align: center;
+
+  .convertContainer {
+    width: 100%;
+    height: auto;
+  }
+
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+    margin-bottom: 20px;
+
+    transition: margin-bottom 0.3s ease-in-out;
+
+    .visible {
+      display: none !important;
+    }
+
+    .dropdown-button {
+      padding: 10px 20px;
+      background-color: $midnight-green;
+      border: none;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      font-weight: 600;
+      width: 60%;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        background-color: $paynes-gray;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    .dropdown-menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 60%;
+
+      .dropdown-list {
+        padding: 5px 10px;
+        background-color: $midnight-green;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: 600;
+        width: 60%;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+        &:first-child {
+          margin-top: 10px;
+          border-radius: 10px 10px 0 0;
+        }
+        &:last-child {
+          border-radius: 0 0 10px 10px;
+        }
+
+        &:hover {
+          background-color: $paynes-gray;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+  }
+}
+
+/* Heading */
+h1 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* File Input */
+input[type="file"] {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 2px solid $paynes-gray;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  background-color: $gunmetal;
+  color: #fff;
+  font-size: 1em;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+
+  &::file-selector-button {
+    background: $paynes-gray;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 600;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: $gunmetal;
+    }
+  }
+}
+
+/* Convert Button */
+button.convertToPNG {
+  color: #fff;
+  padding: 10px 20px;
+  background-color: $midnight-green;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1em;
+  width: 100%;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+
+  &:hover {
+    background-color: $paynes-gray;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Output Section */
+.output {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.imageSource {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  border: 2px solid $paynes-gray;
+  border-radius: 5px;
+}
+
+/* Download Button */
+button.download {
+  padding: 10px 20px;
+  background-color: $midnight-green;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  width: 100%;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    background-color: $paynes-gray;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
